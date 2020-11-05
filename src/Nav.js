@@ -1,9 +1,19 @@
-import React from 'react'
+
+import React, {useEffect, useState} from "react";
 import "./Nav.css"
 
 function Nav() {
+
+    //Scroll listener to bring in and out the nav bar background-color
+    const [navbar, setNavbar] = useState(false)
+
+    const changeBackground = () => {
+       window.scrollY > 100 ? setNavbar(true) : setNavbar(false)
+    }
+window.addEventListener('scroll', changeBackground)
+
     return (
-        <div className="nav">
+        <div className={navbar ? "nav active" : "nav" }>
 
             <img
             className="nav__logo"
