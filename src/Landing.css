@@ -1,0 +1,30 @@
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Images
+https://i.ibb.co/r5krrdz/logo.png
+
+https://i.ibb.co/DpdN7Gn/tab-content-2-1.png
+
+https://i.ibb.co/R3r1SPX/tab-content-2-2.png
+
+https://i.ibb.co/gDhnwWn/tab-content-2-3.png
+
+https://i.ibb.co/vXqDmnh/background.jpg */
