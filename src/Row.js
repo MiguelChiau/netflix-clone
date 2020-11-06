@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "./axios";
 import "./Row.css";
 import YouTube from "react-youtube";
-import movieTrailer from "movie-trailer"
+import movieTrailer from "movie-trailer";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -21,7 +21,7 @@ function Row({ title, fetchURL, isLargeRow }) {
     fetchData();
   }, [fetchURL]);
 
-  //Size for the trailer pop-up
+  // Size for the trailer pop-up
  const opts = {
    height: "390",
    width: "100%",
