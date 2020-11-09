@@ -5,16 +5,16 @@ import "./Landing.css"
 export default function Landing() {
     return (
         <div className="land" style={{
-            backgroundColor: " #111;"
+            backgroundColor: "black",
         }}>
 <div className="showcase"
 style={{
         backgroundSize: "cover",
         backgroundImage: `url("https://i.ibb.co/vXqDmnh/background.jpg")`,
-        // backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
 
         backgroundPosition: "center center",
         height: "93vh",
+        
       }}>
            
               <div className="showcase-top">
@@ -27,7 +27,7 @@ style={{
             alt="Netflix Logo"
             />
 
-            <a href="#" className="btn btn-rounded"> Sign Up</a>
+            <a href="#" className="btn btn-rounded"> Sign In</a>
 
               </div>
 
