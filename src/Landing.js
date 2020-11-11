@@ -1,21 +1,25 @@
 import React from 'react'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import LocalOfferIcon from '@material-ui/icons/LocalOffer'
+import TabletMacIcon from '@material-ui/icons/TabletMac'
+import MeetingRoomIcon from '@material-ui/icons/MeetingRoom'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+
+import IconLabelTabs from "./IconLabelTabs"
+
+
 import "./Landing.css"
 
 export default function Landing() {
     return (
-        <div className="land" style={{
-            backgroundColor: "black",
-        }}>
-<div className="showcase"
-style={{
+        <div >
+        <div className="showcase"
+        style={{
         backgroundSize: "cover",
         backgroundImage: `url("https://i.ibb.co/vXqDmnh/background.jpg")`,
 
         backgroundPosition: "center center",
-        height: "93vh",
-        
-      }}>
+        height: "95vh",
+        }}>
            
               <div className="showcase-top">
                   
@@ -34,10 +38,41 @@ style={{
               <div className="showcase-content">
                   <h1>See what's next</h1>
                   <p>Watch anywhere. Cancel anytime</p>
-                  <a href="#" className="btn btn-xl"> Watch Free For 30 Days <FontAwesomeIcon icon="chevron-right"/></a>
+                  <a href="#" className="btn btn-xl"> Watch Free For 30 Days 
+                  <ChevronRightIcon/>
+                  </a>
 
-              </div>
+              </div> 
+              
         </div>
+
+        <div className="tabs">
+
+            <div className="container">
+                <div className="tab-item tab-border" id="tab-1">
+                    <MeetingRoomIcon/>
+                    <p>Cancel anytime</p>
+                </div>
+            </div>
+
+              <div className="container">
+                <div className="tab-item " id="tab-2">
+                    <TabletMacIcon/>
+                    <p>Watch anywhere</p>
+                </div>
+            </div>
+
+              <div className="container">
+                <div className="tab-item " id="tab-3">
+                    <LocalOfferIcon/>
+                    
+                    <p>Pick your price </p>
+                </div>
+            </div>
+
+        </div>
+        <IconLabelTabs/>
+        
         </div>
 
         
