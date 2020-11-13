@@ -11,6 +11,9 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer'
 import TabletMacIcon from '@material-ui/icons/TabletMac'
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom'
 
+import "./IconLabelTabs.css"
+import Table from "./Table"
+
 
 
 import {grey} from '@material-ui/core/colors/grey';
@@ -94,15 +97,81 @@ export default function NavTabs() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        If you decide Netflix isn't for you - no problem. No commitment.
-								Cancel online anytime.
+
+        <div id="tab1-content">
+          <div className="tab1-content-inner">
+             <div>
+               <p className="text-lg">
+                If you decide Netflix isn't for you - no problem. No commitment.
+				        Cancel online anytime.
+               </p>
+              <a href="#" className="btn btn-xl2"> Watch Free For 30 Days </a> 
+             </div>
+       
+              <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="tab1 img"  />   
+          </div>
+      </div>         
       </TabPanel>
+
       <TabPanel value={value} index={1}>
-        Page Two
+         <div id="tab2-content"> 
+           <div className="tab2-content-top">
+             <p className="text-lg">
+              Watch TV shows and movies anytime, anywhere - personalized for you.
+             </p>
+             <a href="#" className="btn btn-lg"> Watch Free For 30 Days </a>
+          </div>
+
+          <div className="tab2-content-bottom">
+            <div>
+              <img src="https://i.ibb.co/DpdN7Gn/tab-content-2-1.png" alt=""/>
+              <p>
+                Watch on your TV
+              </p>
+              <p className="text-dark">
+                Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blue-ray Players and more.
+              </p>
+            </div>
+
+            <div>
+              <img src="https://i.ibb.co/R3r1SPX/tab-content-2-2.png" alt=""/>
+              <p>
+                Watch instantly or download for later
+              </p>
+              <p className="text-dark">
+                Available on phone and tablet, wherever you go.
+              </p>
+            </div>
+
+            <div>
+              <img src="https://i.ibb.co/gDhnwWn/tab-content-2-3.png" alt=""/>
+              <p>
+                Use any computer
+              </p>
+              <p className="text-dark">
+                Watch right on Netflix.com.
+              </p>
+            </div>
+
+          </div>
+        </div>
       </TabPanel>
+
       <TabPanel value={value} index={2}>
-        Page Three
+        <div id="tab-3-content">
+          <div class="text-center">
+						<p class="text-lg">
+							Choose one plan and watch everything on Netflix.
+						</p>
+						<a href="#" class="btn btn-lg">Watch Free For 30 Days</a>
+					</div>
+
+          <Table/>
+
+        </div>
+
       </TabPanel>
+
     </div>
   );
 }

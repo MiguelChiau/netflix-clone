@@ -46,29 +46,7 @@ export default function Landing() {
               
         </div>
 
-        <div className="tabs">
-
-            <div className="container">
-                <div className="tab-item tab-border" id="tab-1">
-                    <MeetingRoomIcon/>
-                    <p>Cancel anytime</p>
-                </div>
-            </div>
-
-              <div className="container">
-                <div className="tab-item " id="tab-2">
-                    <TabletMacIcon/>
-                    <p>Watch anywhere</p>
-                </div>
-            </div>
-
-              <div className="container">
-                <div className="tab-item " id="tab-3">
-                    <LocalOfferIcon/>
-                    
-                    <p>Pick your price </p>
-                </div>
-            </div>
+        <div className="tabs">  
 
         </div>
         <IconLabelTabs/>
