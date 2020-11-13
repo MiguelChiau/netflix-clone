@@ -26,16 +26,21 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(name, BASIC, STANDARD, PREMIUM) {
+  return { name, BASIC, STANDARD, PREMIUM};
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('Monthly price after free month ends on 6/19/19', `$8.99`, `$12.99`, `$15.99`),
+  createData('HD Available', `$9`, `$13`, `$16`),
+  createData('Ultra HD Available', 262, 16.0, 24),
+  createData('Screens you can watch on at the same time', 305, 3.7, 67),
+  createData('Watch on your laptop, TV, phone and tablet', 356, 16.0, 49),
+  createData('Unlimited movies and TV shows', 356, 16.0, 49),
+  createData('Cancel anytime', 356, 16.0, 49),
+  createData('First month free', 356, 16.0, 49),
+
+
 ];
 
 const useStyles = makeStyles({
@@ -52,11 +57,10 @@ export default function CustomizedTables() {
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-            <StyledTableCell align="right">Calories</StyledTableCell>
-            <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
+            <StyledTableCell></StyledTableCell>
+            <StyledTableCell align="right">BASIC</StyledTableCell>
+            <StyledTableCell align="right">STANDARD&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">PREMIUM&nbsp;</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -65,10 +69,9 @@ export default function CustomizedTables() {
               <StyledTableCell component="th" scope="row">
                 {row.name}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
+              <StyledTableCell align="right">{row.BASIC}</StyledTableCell>
+              <StyledTableCell align="right">{row.STANDARD}</StyledTableCell>
+              <StyledTableCell align="right">{row.PREMIUM}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

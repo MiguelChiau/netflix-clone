@@ -163,7 +163,7 @@ export default function NavTabs() {
 						<p class="text-lg">
 							Choose one plan and watch everything on Netflix.
 						</p>
-						<a href="#" class="btn btn-lg">Watch Free For 30 Days</a>
+						<a href="#" class="btn btn-lg" >Watch Free For 30 Days</a>
 					</div>
 
           <Table/>

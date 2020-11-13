@@ -46,3 +46,7 @@
 .text-dark {
   color: #999;
 }
+
+.btn-lg {
+  padding-bottom: 30px;
+}
