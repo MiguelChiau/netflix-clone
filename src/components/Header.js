@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {NavLink} from "react-router-dom"
+import {NavLink, Link} from "react-router-dom"
 import styled from "styled-components"
 
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -11,44 +11,6 @@ import "../Landing.css"
  class Header extends Component {
     render() {
         return (
-        /*<div className="showcase"
-        style={{
-        backgroundSize: "cover",
-        backgroundImage: `url("https://i.ibb.co/vXqDmnh/background.jpg")`,
-
-        backgroundPosition: "center center",
-        height: "95vh",
-        }}>
-           
-              <div className="showcase-top">
-                  
-            <img
-            // className="nav__logo"
-            src="
-            https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg
-            "
-            alt="Netflix Logo"
-            />
-
-            <NavLink to ="/">
-<a href="#" className="btn btn-rounded"> Sign In</a>
-            </NavLink>
-
-            
-
-              </div>
-
-              <div className="showcase-content">
-                  <h1>See what's next</h1>
-                  <p>Watch anywhere. Cancel anytime</p>
-                  <a href="#" className="btn btn-xl"> Watch Free For 30 Days 
-                  <ChevronRightIcon/>
-                  </a>
-
-              </div> 
-              
-        </div>*/
-
         <HeaderComponent className="header-container">
             <div className="header-top">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"/>
@@ -57,11 +19,10 @@ import "../Landing.css"
                 </NavLink>
             </div>
             <div className="header-content">
-                  <Title>See what's next.</Title>
+                  <Title className="header-content-top">See what's next.</Title>
                   <SubTitle>WATCH ANYWHERE. CANCEL ANYTIME.</SubTitle>
-                  <button> Try it now 
-                  <ChevronRightIcon/>
-                  </button>
+                  <Link className="main-offer-btn"> Try it now 
+                  </Link>
             </div>
         </HeaderComponent>
 
@@ -116,20 +77,6 @@ const HeaderComponent = styled.div`
   background-size: cover;
   
 },
-
-.header-content{
- 
-  position: relative;
-  margin: 4.5rem auto 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  z-index: 2;
-}
-
-
 `;
 
 //For the main title
@@ -145,7 +92,7 @@ const SubTitle = styled.h2`
 font-weight: 400;
 font-size: 1.875rem;
 line-height: 1.25rem;
-margin: 0 0 1.875rem;
+margin: 2.5rem 0 1.875rem;
 text-transform: uppercase;
-position: absolute;
+
 `;

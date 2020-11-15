@@ -34,3 +34,36 @@ a {
   background: rgba(0, 0, 0, 0.6);
   box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
 }
+
+.header-content {
+  position: relative;
+  margin: 4.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.header-content-top {
+  margin: 0 0 3.2rem;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5.1rem;
+}
+
+.main-offer-btn {
+  display: inline-block;
+  background: var(--main-red);
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  margin: 0 30%;
+  padding: 1rem;
+  border-radius: 0.1875rem;
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
