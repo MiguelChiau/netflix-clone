@@ -1,28 +1,31 @@
 import React, { Component } from 'react'
 import {NavLink, Link} from "react-router-dom"
 import styled from "styled-components"
+import Button from "./Button"
 
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 
 
-import "../Landing.css"
 
  class Header extends Component {
     render() {
         return (
         <HeaderComponent className="header-container">
             <div className="header-top">
+                <Link to="/">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"/>
+                </Link>
                 <NavLink to="/" className="signIn-btn">
                     Sign In
                 </NavLink>
             </div>
             <div className="header-content">
-                  <Title className="header-content-top">See what's next.</Title>
+                  <Title className="header-content-top">See what's next!</Title>
                   <SubTitle>WATCH ANYWHERE. CANCEL ANYTIME.</SubTitle>
-                  <Link className="main-offer-btn"> Try it now 
-                  </Link>
+                  <Button className="main-offer-btn" primary> Try it now 
+                  <ChevronRightIcon style={{ fontSize: "37", marginLeft: "1rem", verticalAlign: "bottom"  }}/>
+                  </Button>
             </div>
         </HeaderComponent>
 
@@ -75,6 +78,7 @@ const HeaderComponent = styled.div`
   background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
   background-position: "center center";
   background-size: cover;
+
   
 },
 `;
@@ -86,6 +90,7 @@ font-size: 5rem;
 font-weight: 700;
 line-height: 1.1rem;
 position: relative;
+
 `;
 
 const SubTitle = styled.h2`

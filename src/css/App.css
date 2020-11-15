@@ -37,7 +37,7 @@ a {
 
 .header-content {
   position: relative;
-  margin: 4.5rem auto 0;
+  margin: 10.5rem auto 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,17 +53,28 @@ a {
   line-height: 5.1rem;
 }
 
-.main-offer-btn {
+/* .main-offer-btn {
   display: inline-block;
   background: var(--main-red);
   text-transform: uppercase;
   border: none;
   outline: none;
-  margin: 0 30%;
+  margin: 0 38%;
   padding: 1rem;
   border-radius: 0.1875rem;
   font-size: 2rem;
   text-align: center;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
   cursor: pointer;
-}
+} */
+
+/* Images
+https://i.ibb.co/r5krrdz/logo.png
+
+https://i.ibb.co/DpdN7Gn/tab-content-2-1.png
+
+https://i.ibb.co/R3r1SPX/tab-content-2-2.png
+
+https://i.ibb.co/gDhnwWn/tab-content-2-3.png
+
+https://i.ibb.co/vXqDmnh/background.jpg */

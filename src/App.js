@@ -1,6 +1,5 @@
 import React from "react";
 import Browse from "./Browse"
-import Landing from "./Landing"
 import Main from "./pages/index"
 import {Switch, Route} from "react-router-dom"
 import "./css/App.css"

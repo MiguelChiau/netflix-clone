@@ -1,0 +1,29 @@
+.tabs {
+  padding-top: 1rem;
+  outline: 0;
+}
+
+.tab-nav-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  color: var(--main-grey);
+  margin: 0 12%;
+}
+
+ul li:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Styles of active table */
+.active {
+  border-bottom: 4px solid var(--main-red);
+}
+
+.tab-selected {
+  color: #fff;
+}
