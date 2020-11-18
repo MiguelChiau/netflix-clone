@@ -6,6 +6,8 @@ import TabPrice from "../components/tabs_nav/TabPrice"
 
 import TabContentOne from "./TabContentOne"
 import TabContentTwo from "./TabContentTwo"
+import TabContentThree from "./TabContentThree"
+
 
 import "../css/TabsNav.css"
 
@@ -52,6 +54,9 @@ import "../css/TabsNav.css"
                     </TabPanel>
                     <TabPanel>
                         <TabContentTwo/>
+                    </TabPanel>
+                    <TabPanel>
+                        <TabContentThree/>
                     </TabPanel>
                 </Tabs>
                 
