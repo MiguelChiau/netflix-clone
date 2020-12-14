@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import {NavLink, Link} from "react-router-dom"
 import styled from "styled-components"
 import Button from "./Button"
-
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+
+//For the media query
+import { generateMedia } from "styled-media-query";
 
 
 
@@ -16,7 +18,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
                 <Link to="/">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"/>
                 </Link>
-                <NavLink to="/" className="signIn-btn">
+                <NavLink to="/login" className="signIn-btn">
                     Sign In
                 </NavLink>
             </div>
@@ -34,6 +36,13 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 }
 
 export default Header
+
+const customMedia = generateMedia({
+  lgDesktop: "1350px",
+  mdDesktop: "1150px",
+  tablet: "960px",
+  smTablet: "740px"
+});
 
 //Styles for the header 
 const HeaderComponent = styled.div`
@@ -55,6 +64,11 @@ const HeaderComponent = styled.div`
   opacity: 0.9;
   background: var(--main-red-hover);
 }
+${customMedia.lessThan('smTablet')`
+margin-top: 1.25rem;
+right: 5%;
+
+`}
 
 },
 
@@ -69,6 +83,11 @@ const HeaderComponent = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  ${customMedia.lessThan('tablet')`
+  left: 20%;
+  
+  `}
+
 },
 
 .header-container {
@@ -99,5 +118,6 @@ font-size: 1.875rem;
 line-height: 1.25rem;
 margin: 2.5rem 0 1.875rem;
 text-transform: uppercase;
+
 
 `;
