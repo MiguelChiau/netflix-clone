@@ -81,13 +81,16 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
                     </ul>
 
                     <div className="lang-btn">
-                        <LanguageIcon style={{marginRight: "0.5%"}}/>
-                        English
+                        <LanguageIcon />
+                        <span style={{margin: "auto", paddingLeft: "5px", paddingRight: "5px"}}>
+                            English
+                        </span >
                         <ArrowDropDownIcon/>
 
                     </div>
-
                 </div>
+                
+                <span style={{marginLeft: "18%", fontSize: "0.9rem"}}>Netflix Canada</span>
 
                 
             </FooterContainer>
@@ -133,9 +136,17 @@ a:hover{
 .lang-btn{
     background: transparent;
     border: 0.9px solid #333;
-    width: 8rem;
+    width: 9rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 0 40px 2rem;
 }
 
+.lang-toggle{
+    margin-left: 15%;
+    position: absolute;
+}
 
 
 `
