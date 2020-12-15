@@ -1,7 +1,33 @@
 import React, { Component } from 'react'
 import styled from "styled-components"
+import {Link} from "react-router-dom"
+import FacebookIcon from '@material-ui/icons/Facebook';
+
+
+//For the form validation
+const initState = {
+    email: "",
+    password: "",
+    emailError: "",
+    passwordError: ""
+
+}
 
  class LoginForm extends Component {
+
+    state = initState;
+
+    handleEmailChange = e => {
+        this.setState({
+            password: e.target.value
+        })
+    }
+    handlePasswordChange = e => {
+        this.setState({
+            email: e.target.value
+        })
+    }
+
     render() {
         return (
             <FormContainer>
@@ -10,16 +36,27 @@ import styled from "styled-components"
                         <h1>Sign In</h1>
                         <div className="input-container">
                             <input className="input-empty"
-                            type="email" required/>
+                            type="email" onChange={this.handleEmailChange} required/>
                             <label>Email or Phone Number</label>
                         </div>
                         <div className="input-container">
-                            <input className="input-empty" type="password" required/>
+                            <input className="input-empty" type="password" onChange={this.handlePasswordChange} required/>
                             <label>Password</label>
                         </div>
-                        <Button className="input-container">
-                        Sign In
-                        </Button>
+                        <div className="input-container">
+                             <Button type="submit">Sign In</Button>
+                        </div>
+                        <label className="checkbox-container">
+                            Remember me
+                            <input type="checkbox" checked/>
+                            <span className="checkmark"></span>
+                        </label>
+                       <Link to="/" className="need-help">Need Help?</Link>
+                       <div className="bottom-form">
+                            <span style={{color: "#999", marginRight: "10px"}}>New to Netflix?</span>
+                       <Link to="/" className="sign-up-text">Sign up now</Link>
+                       </div>
+                      
                     </form>
 
                 </div>
@@ -80,6 +117,69 @@ input:focus ~ label{
 input::focus{
     outline: none
 }
+
+.checkbox-container{
+    margin-left: 0.75rem;
+    padding-left: 1.875rem;
+    position: relative;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.checkbox-container input{
+    display: none;
+}
+
+.checkbox-container .checkmark{
+    display: inline-block;
+    background: #454545;
+    width: 1.1rem;
+    height: 1.1rem;
+    left: 0;
+    top: 0;
+    border-radius: 0.1rem;
+    position: absolute;
+}
+
+.checkbox-container input:checked + .checkmark:after{
+    content: "";
+    position: absolute;
+    height: 0.25rem;
+    width: 0.625rem;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    top: 25%;
+    left: 21%;
+    transform: rotate(-45deg);
+}
+
+.need-help{
+    text-decoration: none;
+    color: #828282;
+    margin-left: 6.6rem;
+    font-size: 0.9rem;
+
+}
+
+
+
+.bottom-form{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 4rem;
+}
+
+.sign-up-text{
+    font-size: 1.1rem;
+    color: #fff;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+
 `
 
 const Button = styled.button`
@@ -95,5 +195,6 @@ box-shadow: 0 1px rgba(0, 0, 0, 0.45);
 transition: opacity .2s ease-in;
 cursor: pointer;
 text-decoration: none;
+margin: 1rem 0;
 
 `
