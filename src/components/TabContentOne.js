@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import Button from "./Button"
+import tab1 from "../images/tab-1-Cancel.png"
 
 function TabContentOne() {
     return (
@@ -18,7 +19,9 @@ function TabContentOne() {
 
                     </div>
                    
-                    <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="t"  />   
+                    {/* <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="t"  />    */}
+                    <img src={tab1} alt="t"  />   
+
 
                 </div>
 

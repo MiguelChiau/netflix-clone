@@ -5,28 +5,42 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 
 
 //For the form validation
-const initState = {
-    email: "",
-    password: "",
-    emailError: "",
-    passwordError: ""
+// const initState = {
+//     email: "",
+//     password: "",
+//     emailError: "",
+//     passwordError: ""
 
-}
+// }
 
  class LoginForm extends Component {
 
-    state = initState;
+    // state = initState;
 
-    handleEmailChange = e => {
-        this.setState({
-            password: e.target.value
-        })
-    }
-    handlePasswordChange = e => {
-        this.setState({
-            email: e.target.value
-        })
-    }
+    // handleEmailChange = e => {
+    //     this.setState({
+    //         password: e.target.value
+    //     })
+    // }
+    // handlePasswordChange = e => {
+    //     this.setState({
+    //         email: e.target.value
+    //     })
+    // }
+
+    // validate = () => {
+    //     let inputError = false;
+    //     const errors = {
+    //         emailError: "",
+    //         Password: ""
+    //     }
+
+    //     if(!this.state.email) {
+    //         inputError = true;
+    //         errors.emailError = "Please enter a valid email"
+    //     }
+
+    // }
 
     render() {
         return (

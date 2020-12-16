@@ -3,6 +3,7 @@ import {NavLink, Link} from "react-router-dom"
 import styled from "styled-components"
 import Button from "./Button"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import bg from "../images/bg.jpg"
 
 //For the media query
 import { generateMedia } from "styled-media-query";
@@ -94,7 +95,8 @@ right: 5%;
   width: 100vw;
   height: 90vh;
   position: relative;
-  background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
+  // background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
+  background-image: url(../images/bg.jpg)
   background-position: "center center";
   background-size: cover;
 

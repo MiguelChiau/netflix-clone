@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
+import laptop from "../images/tab-2-Computer.png"
+import tablet from "../images/tab-2-Mobile.png"
+import tv from "../images/tab-2-TV.png"
 
 
  function TabContentTwo() {
@@ -16,7 +19,7 @@ import styled from "styled-components"
 
                 <div className="tab-bottom-content">
                     <div >
-                      <img src="https://i.ibb.co/DpdN7Gn/tab-content-2-1.png" alt="" style={{width: "18.75rem", paddingTop:"0.625rem" }}/>
+                      <img src={tv} alt="" style={{width: "18.75rem", paddingTop:"0.625rem" }}/>
                       <h3>
                           Watch on your TV
                       </h3>
@@ -26,7 +29,7 @@ import styled from "styled-components"
                     </div>
 
                     <div >
-                      <img src="https://i.ibb.co/R3r1SPX/tab-content-2-2.png" alt="" style={{width: "18.75rem"}}/>
+                      <img src={tablet} alt="" style={{width: "18.75rem"}}/>
                       <h3>
                          Watch instantly or download for later
                       </h3>
@@ -36,7 +39,7 @@ import styled from "styled-components"
                     </div>
 
                     <div >
-                      <img src="https://i.ibb.co/gDhnwWn/tab-content-2-3.png" alt="" style={{width: "18.75rem"}}/>
+                      <img src={laptop} alt="" style={{width: "18.75rem"}}/>
                       <h3>
                           Use any computer
                       </h3>
