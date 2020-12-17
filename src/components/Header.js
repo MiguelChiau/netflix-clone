@@ -4,6 +4,8 @@ import styled from "styled-components"
 import Button from "./Button"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import bg from "../images/bg.jpg"
+import NetflixLogo from "../images/logo.png"
+
 
 //For the media query
 import { generateMedia } from "styled-media-query";
@@ -17,7 +19,7 @@ import { generateMedia } from "styled-media-query";
         <HeaderComponent className="header-container">
             <div className="header-top">
                 <Link to="/">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"/>
+                <img src={NetflixLogo}/>
                 </Link>
                 <NavLink to="/login" className="signIn-btn">
                     Sign In
@@ -26,9 +28,12 @@ import { generateMedia } from "styled-media-query";
             <div className="header-content">
                   <Title className="header-content-top">See what's next!</Title>
                   <SubTitle>WATCH ANYWHERE. CANCEL ANYTIME.</SubTitle>
-                  <Button className="main-offer-btn" primary> Try it now 
+                  <Link to="/choose-plan">
+                  <Button  className="main-offer-btn" primary> Try it now 
                   <ChevronRightIcon style={{ fontSize: "37", marginLeft: "1rem", verticalAlign: "bottom"  }}/>
                   </Button>
+                  </Link>
+                  
             </div>
         </HeaderComponent>
 

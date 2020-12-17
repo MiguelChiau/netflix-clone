@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import Button from "./Button"
 import tab1 from "../images/tab-1-Cancel.png"
+import {Link} from "react-router-dom"
 
 function TabContentOne() {
     return (
@@ -14,9 +15,10 @@ function TabContentOne() {
 				        Cancel online anytime.
                     </span>
                     <br/>
-                    <button style={{background: "var(--main-red)", border: "none",
+                    <Link to="/choose-plan">
+                     <button style={{background: "var(--main-red)", border: "none",
                      outline: "none", color: "#fff", padding: "1rem", fontSize: "1.5rem", margin: "2rem"}}>Try it now</button>
-
+                    </Link>
                     </div>
                    
                     {/* <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="t"  />    */}

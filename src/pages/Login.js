@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from "styled-components"
 import LoginForm from "../components/login/LoginForm"
 import LoginFooter from "../components/login/LoginFooter"
+import NetflixLogo from "../images/logo.png"
 
 import {NavLink} from "react-router-dom"
 
@@ -12,7 +13,7 @@ import {NavLink} from "react-router-dom"
             <div className="main-login-container">
                 <div className="header-top">
                     <NavLink to="/">
-                <Logo src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"/>
+                <Logo src={NetflixLogo}/>
                     </NavLink>
                 </div>
                 <LoginForm />

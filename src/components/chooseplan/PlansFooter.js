@@ -4,11 +4,9 @@ import styled from "styled-components"
 import LanguageIcon from '@material-ui/icons/Language';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
-
- class Footer extends Component {
-    render() {
-        return (
-            <FooterContainer>
+const PlansFooter = () => {
+    return (
+        <FooterContainer style={{background: "#f3f3f3"}}>
                  <span style={{marginLeft: "17.5%", fontSize: "1.125rem", color: "#999"}}>
                     Questions? 
                     <Link style={{marginLeft: "0.5%"}}>
@@ -18,23 +16,26 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
                 <div className="footer-columns">
                     <ul>
                         <li>
-                            <Link>Gift Card Terms</Link>
+                            <Link>FAQ</Link>
                         </li>
+                       
+                    </ul>
+                    <ul>
+                        <li>
+                            <Link>Help Center</Link>
+                        </li>
+                       
                        
                     </ul>
                     <ul>
                         <li>
                             <Link>Terms of Use</Link>
                         </li>
-                       
-                       
                     </ul>
-                    <ul>
+                     <ul>
                         <li>
-                            <Link>Privacy Statement</Link>
+                            <Link>Privacy</Link>
                         </li>
-                        
-                        
                     </ul>
                    
 
@@ -43,14 +44,12 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
                 
                 
             </FooterContainer>
-        )
-    }
+    )
 }
 
-export default Footer;
+export default PlansFooter
 
 const FooterContainer = styled.footer`
-background: rgba(0, 0, 0, 0.8);
 justify-content: center;
 margin-top: 6rem;
 position: relative;

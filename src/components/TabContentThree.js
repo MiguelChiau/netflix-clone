@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-
+import {Link} from "react-router-dom"
 import CheckIcon from '@material-ui/icons/Check';
 import CloseIcon from '@material-ui/icons/Close';
 
@@ -12,8 +12,11 @@ import CloseIcon from '@material-ui/icons/Close';
                     <span style={{fontSize: "1.5rem"}}> 
                         Choose one plan and watch everything on Netflix
                     </span>
+                    <Link to="/choose-plan">
                     <button style={{background: "var(--main-red)", border: "none",
                      outline: "none", color: "#fff", padding: "1rem", fontSize: "1.5rem", margin: "2rem", width: "10rem"}}>Try it now</button>
+                    </Link>
+                    
                 </div>
 
                 <div className="tab-bottom-content">
