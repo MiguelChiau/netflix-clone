@@ -106,7 +106,7 @@ const regexp = RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})
                        <Link to="/" className="need-help">Need Help?</Link>
                        <div className="bottom-form">
                             <span style={{color: "#999", marginRight: "10px"}}>New to Netflix?</span>
-                       <Link to="/" className="sign-up-text">Sign up now</Link>
+                       <Link to="/browse" className="sign-up-text">Sign up now</Link>
                        </div>
                       
                     </form>
