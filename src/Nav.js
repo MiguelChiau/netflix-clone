@@ -1,6 +1,9 @@
 
 import React, {useEffect, useState} from "react";
 import "./Nav.css"
+import NetflixLogo from "./images/logo.png"
+import avatar from "./images/profileAvatar.png"
+import {Link} from "react-router-dom"
 
 function Nav() {
 
@@ -14,20 +17,21 @@ window.addEventListener('scroll', changeBackground)
 
     return (
         <div className={navbar ? "nav active" : "nav" }>
-
-            <img
+            <Link to="/">
+             <img
             className="nav__logo"
-            src="
-            https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg
-            "
+            src={NetflixLogo}
             alt="Netflix Logo"
             />
-
-            <img
+            </Link>
+           
+           <Link to="/watching">
+           <img
             className="nav__avatar"
-            src="https://pbs.twimg.com/media/DlKNEufWsAAgr2E.jpg"
+            src={avatar}
             alt="Netflix Avatar"
             />
+           </Link>
             
         </div>
     )
