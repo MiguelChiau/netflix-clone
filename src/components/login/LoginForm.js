@@ -4,43 +4,77 @@ import {Link} from "react-router-dom"
 import FacebookIcon from '@material-ui/icons/Facebook';
 
 
-//For the form validation
-// const initState = {
-//     email: "",
-//     password: "",
-//     emailError: "",
-//     passwordError: ""
+// For the form validation
+const initState = {
+    email: "",
+    password: "",
+    emailError: "",
+    passwordError: "",
+    checked: false
 
-// }
+}
+
+const regexp = RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)
 
  class LoginForm extends Component {
 
-    // state = initState;
+    state = initState;
 
-    // handleEmailChange = e => {
-    //     this.setState({
-    //         password: e.target.value
-    //     })
-    // }
-    // handlePasswordChange = e => {
-    //     this.setState({
-    //         email: e.target.value
-    //     })
-    // }
+    handleEmailChange = e => {
+        this.setState({
+            email: e.target.value
+        })
+    }
+    handlePasswordChange = e => {
+        this.setState({
+            password: e.target.value
+        })
+    }
 
-    // validate = () => {
-    //     let inputError = false;
-    //     const errors = {
-    //         emailError: "",
-    //         Password: ""
-    //     }
+    validate = () => {
+        let inputError = false;
+        const errors = {
+            emailError: "",
+            Password: ""
+        }
 
-    //     if(!this.state.email) {
-    //         inputError = true;
-    //         errors.emailError = "Please enter a valid email"
-    //     }
+        if(!this.state.email) {
+            inputError = true;
+            errors.emailError = "Please enter a valid email"
+        } 
+        else if(!this.state.email.match(regexp)){
+            inputError = true;
+            errors.emailError = (
+                <span style={{color: "red"}}>Please enter a valid email address</span>
+            )
+        }
+        if(this.state.password.length < 4){
+            inputError = true;
+            errors.passwordError = "You password must be at least 4 characters long"
+        }
+        this.setState({
+            ...errors
+        })
+        return inputError
 
-    // }
+    }
+
+    onSubmit = e => {
+        e.preventDefault()
+
+        const err = this.validate()
+        if(!err){
+            this.setState(initState)
+        }
+    }
+
+    //For the check box
+    handlerCheckbox = e => {
+        this.setState ({
+            checked: e.target.checked
+
+        })
+    }
 
     render() {
         return (
@@ -49,20 +83,24 @@ import FacebookIcon from '@material-ui/icons/Facebook';
                     <form>
                         <h1>Sign In</h1>
                         <div className="input-container">
-                            <input className="input-empty"
-                            type="email" onChange={this.handleEmailChange} required/>
+                            <input className={this.state.emailError ? "input-error input-empty" : "input-empty"}
+                            type="email" onChange={this.handleEmailChange} required
+                            value ={this.state.email}/>
                             <label>Email or Phone Number</label>
+                            <span style={{color: "#db7302"}}>{this.state.emailError}</span>
                         </div>
                         <div className="input-container">
-                            <input className="input-empty" type="password" onChange={this.handlePasswordChange} required/>
+                            <input className={this.state.passwordError ? "input-error input-empty" : "input-empty"} type="password" onChange={this.handlePasswordChange} required 
+                            value ={this.state.password}/>
                             <label>Password</label>
+                             <span style={{color: "#db7302"}}>{this.state.passwordError}</span>
                         </div>
                         <div className="input-container">
-                             <Button type="submit">Sign In</Button>
+                             <Button type="submit" onClick={e=>this.onSubmit(e)}>Sign In</Button>
                         </div>
                         <label className="checkbox-container">
                             Remember me
-                            <input type="checkbox" checked/>
+                            <input type="checkbox" defaultChecked={this.state.checked} onChange={this.handlerCheckbox}/>
                             <span className="checkmark"></span>
                         </label>
                        <Link to="/" className="need-help">Need Help?</Link>
@@ -109,6 +147,10 @@ z-index: 2;
     border-radius: 0.25rem;
     height: 3rem;
     padding: 0.9rem 1.25rem 0;
+}
+
+.input-error{
+    border-bottom: 1px solid #db7302;
 }
 
 form div label {

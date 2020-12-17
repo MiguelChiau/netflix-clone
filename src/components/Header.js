@@ -93,7 +93,7 @@ right: 5%;
 
 .header-container {
   width: 100vw;
-  height: 90vh;
+  height: 85vh;
   position: relative;
   // background-image: url("https://i.ibb.co/vXqDmnh/background.jpg");
   background-image: url(../images/bg.jpg)

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from "styled-components"
 import LoginForm from "../components/login/LoginForm"
+import LoginFooter from "../components/login/LoginFooter"
+
 import {NavLink} from "react-router-dom"
 
 
@@ -14,6 +16,7 @@ import {NavLink} from "react-router-dom"
                     </NavLink>
                 </div>
                 <LoginForm />
+                <LoginFooter />
             </div>
         )
     }
