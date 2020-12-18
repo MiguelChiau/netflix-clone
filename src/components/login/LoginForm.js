@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from "styled-components"
-import {Link} from "react-router-dom"
+import {Link, NavLink} from "react-router-dom"
 import FacebookIcon from '@material-ui/icons/Facebook';
 
 
@@ -95,9 +95,16 @@ const regexp = RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})
                             <label>Password</label>
                              <span style={{color: "#db7302"}}>{this.state.passwordError}</span>
                         </div>
-                        <div className="input-container">
-                             <Button type="submit" onClick={e=>this.onSubmit(e)}>Sign In</Button>
+
+                       <Link to="/watching">
+                           <div className="input-container">
+                             <Button type="submit" >Sign In</Button>
+                             {/* <Button type="submit" onClick={e=>this.onSubmit(e)}>Sign In</Button> */}
                         </div>
+
+                       </Link>
+                       
+                        
                         <label className="checkbox-container">
                             Remember me
                             <input type="checkbox" defaultChecked={this.state.checked} onChange={this.handlerCheckbox}/>

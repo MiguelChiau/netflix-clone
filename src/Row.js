@@ -23,12 +23,22 @@ function Row({ title, fetchURL, isLargeRow }) {
 
   // Size for the trailer pop-up
  const opts = {
-   height: "390",
-   width: "100%",
+   height: "360",
+   width: "640",
+   alignItems: "center",
+
+
    playerVars: {autoplay: 1}
  }
 
  const handleClick = (movie) => {
+   console.log("the movie you clicked on in", movie.name)
+   console.log( movie.backdrop_path)
+   console.log( movie.overview)
+   console.log( movie.vote_average)
+
+
+
    if(trailerUrl) {
      setTrailerUrl("");
    } else {
@@ -63,9 +73,13 @@ function Row({ title, fetchURL, isLargeRow }) {
             }`}
             alt={movie.name}
           />
+          
         ))}
+
       </div>
+      <div style={{display: "flex", justifyContent: "center"}}>
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts}/>}
+      </div>
     </div>
   );
 }

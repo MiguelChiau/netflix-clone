@@ -2,7 +2,6 @@ import React from 'react'
 import styled from "styled-components"
 import NetflixLogo from "../images/logo.png"
 import {Link} from "react-router-dom"
-import profiles from "../components/profiles/profiles.json"
 import profile1 from "../images/profile-1.png"
 import profile2 from "../images/profile-2.png"
 import profile3 from "../images/profile-3.png"
