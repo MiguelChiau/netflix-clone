@@ -1,4 +1,4 @@
-###Summary: 
+## Summary: 
 
 A clone of the canadian version of Netflix. The web application includes a landing page, a login page, a profiles page an dthe main browsing page where movie trailers can be played. 
 
