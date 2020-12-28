@@ -1,6 +1,13 @@
 ## Summary: 
 
-A clone of the canadian version of Netflix. The web application includes a landing page, a login page, a profiles page an dthe main browsing page where movie trailers can be played. 
+A clone of the canadian version of Netflix. The web application includes a landing page, a login page, a profiles page an dthe main browsing page where movie trailers can be played.
+
+## Functionality
+
+This web uses a movie database API, TMDB, to collect movies for the different categories on Netflix and play their respectives trailers using the YouTube Iframe Player API.R The app is built on React.js and uses styled components for the UI.
+
+## URL For Live Preview
+https://netflix-clone-5b788.firebaseapp.com/
 
 
 
