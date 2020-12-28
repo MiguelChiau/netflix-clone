@@ -1,3 +1,8 @@
+Summary: 
+A clone of the canadian version of Netflix. The web application includes a landing page, a login page, a profiles page an dthe main browsing page where movie trailers can be played. 
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
