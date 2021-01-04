@@ -1,10 +1,28 @@
+# Netflix-clone
+
+### [Live Site](https://netflix-clone-5b788.firebaseapp.com/)
+
+<img width="1440" alt="Screen Shot 2021-01-03 at 4 43 39 PM" src="https://user-images.githubusercontent.com/49828283/103492936-4d04b080-4de3-11eb-87bf-cb355ff184f1.png">
+
+<img width="1440" alt="Screen Shot 2021-01-03 at 4 43 52 PM" src="https://user-images.githubusercontent.com/49828283/103492958-70c7f680-4de3-11eb-8f71-2090831005db.png">
+
+
+<img width="1440" alt="Screen Shot 2021-01-03 at 4 44 02 PM" src="https://user-images.githubusercontent.com/49828283/103492980-85a48a00-4de3-11eb-95ca-5d9a1a2841d0.png">
+
+
+<img width="1440" alt="Screen Shot 2021-01-03 at 4 44 12 PM" src="https://user-images.githubusercontent.com/49828283/103492990-95bc6980-4de3-11eb-9311-93e244138caa.png">
+
+
+<img width="1440" alt="Screen Shot 2021-01-03 at 4 44 49 PM" src="https://user-images.githubusercontent.com/49828283/103492998-a240c200-4de3-11eb-8472-b22a3e852405.png">
+
+
 ## Summary: 
 
 A clone of the canadian version of Netflix. The web application includes a landing page, a login page, a profiles page an dthe main browsing page where movie trailers can be played.
 
 ## Functionality
 
-This web uses a movie database API, TMDB, to collect movies for the different categories on Netflix and play their respectives trailers using the YouTube Iframe Player API.R The app is built on React.js and uses styled components for the UI.
+This web uses a movie database API, TMDB, to collect movies for the different categories on Netflix and play their respectives trailers using the YouTube Iframe Player API. The app is built on React.js and uses styled components for the UI.
 
 ## URL For Live Preview
 https://netflix-clone-5b788.firebaseapp.com/
